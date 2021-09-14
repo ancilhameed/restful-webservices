@@ -1,0 +1,5 @@
+http://localhost:8001/hello-world/path-variable/Ancil%20Hameed%20A.T
+
+http://localhost:8001/hello-world
+
+http://localhost:8001/hello-world-bean
