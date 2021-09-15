@@ -39,9 +39,68 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+<!-- 		Earlier version of spring we were getting it with starter-web but recent version it was separated-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		
+<!-- 		HATEOAS - Hypermedia As The Engine Of Application State [Used for Giving useful API's for a given Rest API] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>		
+		
+<!-- 		Internationalization - i18n -> Customization of App for different countries & languages --> 
+		
+<!-- 		Content Negotiation - Adding below jackson dependency to support XML Response for our APIs -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		
+<!-- 		Open API or Swagger - For documenting our Rest API's
+Difference between OpenAPI and Swagger - OpenAPI was earlier called Swagger. Swagger was created in 2011,
+when it created its specifications and also the Tools to play around its specifications. In future,
+Swagger became popular, in 2015 Swagger was open sourced and it was renamed as OpenAPI. 
+Only the Swagger Specification was open sourced, so only that part is called OpenAPI,
+ tools to play around with Swagger is still called Swagger-->
+		<dependency>
+	      <groupId>org.springdoc</groupId>
+	      <artifactId>springdoc-openapi-ui</artifactId>
+	      <version>1.5.10</version>
+	   </dependency>					
+		
+<!-- 	ACTUATOR -	Monitor and Manage the Application -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>			
+
+<!-- 	HAL EXPLORER or HAL Bowser - A simple format that gives a consistent and easy way to hyperlink between resources in our API 
+ When our API is supporting HATEOAS and also has Actuator then we can use HAL to see Visual representation. HAL explorer provides 
+ simpler way to explore our Rest APIs.  Instead of using Rest API clients we can use HAL-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-explorer</artifactId>
+		</dependency>
+		
+		
+<!-- 	Spring Security -	Basic Authentication for Rest API -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>	 -->							
+				
 	</dependencies>
 
 	<build>

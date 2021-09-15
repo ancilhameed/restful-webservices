@@ -5,15 +5,32 @@ package com.learn.restfulwebservicesconcepts.vo;
 
 import java.util.Date;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 /**
  * @author Ancil Hameed
  * 
  * Added : 14-Sep-2021, 11:40:30 am
  */
+
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue
 	private Long id;
+	
+	@Size(min = 2, message = "Name should be minimum 2 characters.")
 	private String name;
+	
+	@Past(message="Birth date cannot be in future.")
 	private Date birthDate;
 	/**
 	 * @return the id
